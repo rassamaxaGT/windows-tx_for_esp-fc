@@ -1,16 +1,16 @@
 # rc_transmitter
 
-A new Flutter project.
+Проект позволяет управлять дроном на esp-fc с помощью геймпада подключенного к ПК на Windows. 
 
 ## Getting Started
+Предварительно нужно настроить esp-fc по инструкции от разработчика 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Перейти на страницу релизов
+2. Скачать последнюю версию скомпилированного приложения и прошивки esp-now_tx.ino для esp32 в роли tx
+4. Разархивировать файлы по любому пути (желательно без кириллицы)
+5. Прошить esp32 через Arduino IDE
+6. Запустить исполняемый файл rc_transmitter.exe
+7. Внутри приложения указать указать ком-порт esp32-tx, MAC и канал на котором работает esp32, выступающая в роли полётного контроллера
+8. Подключиться к esp-tx кнопкой Connect 
+9. При первом использовании потрбуется бинд: СНАЧАЛА кнопка bind в приложении, затем включить дрон. В последующим биндить при запуске не нужно.
+10. При необходимости донастройте оси внутри esp-fc
